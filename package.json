@@ -1,18 +1,13 @@
 {
   "name": "retreaver-webform",
   "version": "1.0.0",
-  "description": "Retreaver POST API Form",
-  "main": "server.js",
+  "description": "Retreaver POST API Webform",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "vercel dev",
+    "start": "node api/submit.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.4"
+    "node-fetch": "^3.3.2"
   }
 }
