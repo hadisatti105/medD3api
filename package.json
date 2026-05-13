@@ -1,13 +1,5 @@
 {
   "name": "retreaver-webform",
   "version": "1.0.0",
-  "description": "Retreaver POST API Webform",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vercel dev",
-    "start": "node api/submit.js"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
+  "dependencies": {}
 }

@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     if (!caller_number || !caller_state || !caller_zip) {
       return res.status(400).json({
         success: false,
-        message: "Missing required fields"
+        message: "Missing fields"
       });
     }
 
