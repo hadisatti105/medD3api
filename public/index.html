@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Retreaver POST Form</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Retreaver Lead Form</h1>
+
+    <form id="leadForm">
+
+      <div class="form-group">
+
+        <label>
+          Caller Number
+        </label>
+
+        <input
+          type="text"
+          id="caller_number"
+          placeholder="5551234567"
+          required
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+          Caller State
+        </label>
+
+        <input
+          type="text"
+          id="caller_state"
+          placeholder="CA"
+          required
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+          Caller ZIP
+        </label>
+
+        <input
+          type="text"
+          id="caller_zip"
+          placeholder="90210"
+          required
+        >
+
+      </div>
+
+      <button type="submit">
+        Submit Lead
+      </button>
+
+    </form>
+
+    <div id="result"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
