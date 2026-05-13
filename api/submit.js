@@ -6,13 +6,6 @@ export default async function handler(req, res) {
 
     const { caller_number, caller_state, caller_zip } = req.body || {};
 
-    if (!caller_number || !caller_state || !caller_zip) {
-      return res.status(400).json({
-        success: false,
-        message: "Missing fields"
-      });
-    }
-
     const response = await fetch("https://rtb.retreaver.com/rtbs.json", {
       method: "POST",
       headers: {
@@ -35,15 +28,9 @@ export default async function handler(req, res) {
       data = text;
     }
 
-    return res.status(200).json({
-      success: true,
-      response: data
-    });
+    res.status(200).json({ success: true, response: data });
 
-  } catch (error) {
-    return res.status(500).json({
-      success: false,
-      error: error.message
-    });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
   }
 }
