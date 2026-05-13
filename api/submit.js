@@ -1,10 +1,17 @@
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Only POST allowed" });
-  }
-
   try {
-    const { caller_number, caller_state, caller_zip } = req.body;
+    if (req.method !== "POST") {
+      return res.status(405).json({ error: "Only POST allowed" });
+    }
+
+    const { caller_number, caller_state, caller_zip } = req.body || {};
+
+    if (!caller_number || !caller_state || !caller_zip) {
+      return res.status(400).json({
+        success: false,
+        message: "Missing required fields"
+      });
+    }
 
     const response = await fetch("https://rtb.retreaver.com/rtbs.json", {
       method: "POST",
